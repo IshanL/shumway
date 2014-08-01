@@ -139,7 +139,7 @@ module Shumway.Shell {
   }
 
   function parseABCs(files: string []) {
-
+        //...
   }
 
   function executeFile(file: string): boolean {
@@ -298,8 +298,8 @@ module Shumway.Shell {
       playerglobal.scripts[abc.name] = abc;
       if (typeof abc.defs === 'string') {
         playerglobal.map[abc.defs] = abc.name;
-        writer.writeLn(abc.defs)
-      } else {
+        writer.writeLn(abc.defs);
+       } else {
         for (var j = 0; j < abc.defs.length; j++) {
           var def = abc.defs[j];
           playerglobal.map[def] = abc.name;

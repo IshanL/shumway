@@ -122,7 +122,7 @@ module Shumway.Remoting.Player {
         } else {
           this.output.writeInt(0);
         }
-        textContent.flags &= ~Shumway.TextContentFlags.Dirty
+        textContent.flags &= ~Shumway.TextContentFlags.Dirty;
       }
     }
 
@@ -272,8 +272,7 @@ module Shumway.Remoting.Player {
     writeDrawToBitmap(bitmapData: flash.display.BitmapData, source: Shumway.Remoting.IRemotable,
                        matrix: flash.geom.Matrix = null,
                        colorTransform: flash.geom.ColorTransform = null, blendMode: string = null,
-                       clipRect: flash.geom.Rectangle = null, smoothing: boolean = false)
-    {
+                       clipRect: flash.geom.Rectangle = null, smoothing: boolean = false) {
       this.output.writeInt(MessageTag.DrawToBitmap);
       this.output.writeInt(bitmapData._id);
       if (BitmapData.isType(source)) {
@@ -393,8 +392,8 @@ module Shumway.Remoting.Player {
       return {
         kind: EventKind.Focus,
         type: <FocusEventType>typeId
-      }
-    }
+      };
+     }
 
     private _readMouseEvent(): MouseEventAndPointData {
       var input = this.input;

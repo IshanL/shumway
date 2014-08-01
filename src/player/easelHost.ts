@@ -121,6 +121,7 @@ module Shumway {
     }
 
     processFrame() {
+        //...
     }
 
     onExernalCallback(request) {

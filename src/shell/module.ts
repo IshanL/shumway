@@ -28,8 +28,8 @@ document = <any>({
           getContext: function (x) {
             return null;
           }
-        }
-    }
+        };
+     }
   }
 });
 

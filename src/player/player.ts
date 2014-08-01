@@ -311,8 +311,7 @@ module Shumway.Player {
         self._frameTimeout = setTimeout(tick, 1000 / frameRateOption.value);
         if (!dontSkipFrames && (
               !frameEnabledOption.value && runFrameScripts ||
-              self._shouldThrottleDownFrameExecution()))
-        {
+              self._shouldThrottleDownFrameExecution())) {
           return;
         }
         stage.scaleX = stage.scaleY = stageScaleOption.value;
@@ -401,7 +400,7 @@ module Shumway.Player {
           if (playSymbolOption.value > 0) {
             symbol = loaderInfo.getSymbolById(playSymbolOption.value);
             if (symbol instanceof Shumway.Timeline.DisplaySymbol) {
-
+                //...
             } else {
               symbol = null;
             }
